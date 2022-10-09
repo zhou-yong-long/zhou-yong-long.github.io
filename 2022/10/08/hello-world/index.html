@@ -1,105 +1,207 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
+
 <head>
+
+  <!-- Minima -->
+  <!-- Hexo theme created by @adisaktijrs -->
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
-  
-  
-  <title>Hello World | WuShiSan</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="https://zhou-yong-long.github.io/zhou-yong-long.github.io/2022/10/08/hello-world/index.html">
-<meta property="og:site_name" content="WuShiSan">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
-<meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-10-08T15:02:59.294Z">
-<meta property="article:modified_time" content="2022-10-08T15:02:59.294Z">
-<meta property="article:author" content="zhou-yong-long">
-<meta name="twitter:card" content="summary">
-  
-    <link rel="alternate" href="/zhou-yong-long.github.io/atom.xml" title="WuShiSan" type="application/atom+xml">
-  
-  
-    <link rel="shortcut icon" href="/zhou-yong-long.github.io/favicon.png">
-  
-  
-    
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
 
   
+  <title>Hello World</title>
   
-<link rel="stylesheet" href="/zhou-yong-long.github.io/css/style.css">
+  <link rel="canonical" href="https://zhou-yong-long.github.io/zhou-yong-long.github.io/2022/10/08/hello-world/">
+  
+  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in ">
+  
+  
+  <meta name="author" content="zhou-yong-long">
+  
+  
+  
+  <meta property="og:site_name" content="WuShiSan" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Hello World" />
+  
+  <meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in ">
+  
+  <meta property="og:url" content="https://zhou-yong-long.github.io/zhou-yong-long.github.io/2022/10/08/hello-world/" />
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Hello World">
+  
+  <meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in ">
+  
+  
+  
+  
+  <meta name="twitter:url" content="https://zhou-yong-long.github.io/zhou-yong-long.github.io/2022/10/08/hello-world/" />
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Preload fonts
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="preload" href="/fonts/dm-serif-display-v4-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/inter-v2-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  
+<link rel="stylesheet" href="/zhou-yong-long.github.io/css/normalize.css">
 
   
-    
-<link rel="stylesheet" href="/zhou-yong-long.github.io/fancybox/jquery.fancybox.min.css">
+<link rel="stylesheet" href="/zhou-yong-long.github.io/css/skeleton.css">
 
   
+<link rel="stylesheet" href="/zhou-yong-long.github.io/css/custom.css">
+
+  
+<link rel="stylesheet" href="/zhou-yong-long.github.io/css/prism-dark.css">
+
+  
+<link rel="stylesheet" href="/zhou-yong-long.github.io/css/prism-line-numbers.css">
+
+  <!-- User css -->
+  
+  
+<link rel="stylesheet" href="/zhou-yong-long.github.io/css/user.css">
+
+  
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="/images/favicon.png">
+
+  <!-- Custom Theme Color Style
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <style>
+  a:not(.icon) {
+    text-decoration-color: #0FA0CE;
+    background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 50%,
+      #0FA0CE 50%
+    );
+  }
+  blockquote {
+    border-left: 8px solid #0FA0CE;
+  }
+  .nanobar .bar {
+    background: #0FA0CE;
+  }
+  .button.button-primary:hover,
+  button.button-primary:hover,
+  input[type="submit"].button-primary:hover,
+  input[type="reset"].button-primary:hover,
+  input[type="button"].button-primary:hover,
+  .button.button-primary:focus,
+  button.button-primary:focus,
+  input[type="submit"].button-primary:focus,
+  input[type="reset"].button-primary:focus,
+  input[type="button"].button-primary:focus {
+    background-color: #0FA0CE;
+    border-color: #0FA0CE;
+  }
+  input[type="email"]:focus,
+  input[type="number"]:focus,
+  input[type="search"]:focus,
+  input[type="text"]:focus,
+  input[type="tel"]:focus,
+  input[type="url"]:focus,
+  input[type="password"]:focus,
+  textarea:focus,
+  select:focus {
+    border: 1px solid #0FA0CE;
+  }
+</style>
+
+  <!-- Google Analytics (With Privacy Settings On)
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  
+
+  
+  <script src="/js/pic.min.js" defer></script>
+  
+
+  
+
 <meta name="generator" content="Hexo 6.3.0"></head>
 
 <body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/zhou-yong-long.github.io/" id="logo">WuShiSan</a>
-      </h1>
-      
-        <h2 id="subtitle-wrap">
-          <a href="/zhou-yong-long.github.io/" id="subtitle">一个在不断学习的人</a>
-        </h2>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/zhou-yong-long.github.io/">Home</a>
-        
-          <a class="main-nav-link" href="/zhou-yong-long.github.io/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/zhou-yong-long.github.io/atom.xml" title="RSS 订阅"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜索"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://zhou-yong-long.github.io/zhou-yong-long.github.io"></form>
-      </div>
-    </div>
-  </div>
-</header>
+  <div class="container">
+    <div class="row">
+      <div>
 
-      <div class="outer">
-        <section id="main"><article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/zhou-yong-long.github.io/2022/10/08/hello-world/" class="article-date">
-  <time class="dt-published" datetime="2022-10-08T15:02:59.294Z" itemprop="datePublished">2022-10-08</time>
-</a>
-    
+        <div class="row">
+  <div class="two columns" style="max-width: 50px">
+    <h1 class="mt-2 mode">
+      <div onclick=setDarkMode(true) id="darkBtn">🌑</div>
+      <div onclick=setDarkMode(false) id="lightBtn" class=hidden>☀️</div>
+      <script >
+        if (localStorage.getItem('preferredTheme') == 'dark') {
+          setDarkMode(true)
+        }
+        function setDarkMode(isDark) {
+          var darkBtn = document.getElementById('darkBtn')
+          var lightBtn = document.getElementById('lightBtn')
+          if (isDark) {
+            lightBtn.style.display = "block"
+            darkBtn.style.display = "none"
+            localStorage.setItem('preferredTheme', 'dark');
+          } else {
+            lightBtn.style.display = "none"
+            darkBtn.style.display = "block"
+            localStorage.removeItem('preferredTheme');
+          }
+          document.body.classList.toggle("darkmode");
+        }
+      </script>
+    </h1>
   </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="p-name article-title" itemprop="headline name">
+
+  <div class="six columns ml-1">
+    <h1 class="mt-2">
       Hello World
     </h1>
-  
+  </div>
 
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+  <div class="twelve columns">
+    <div class="row">
+      <div class="nine columns left">
+        <a href="/zhou-yong-long.github.io/">Home</a>
+        
+          
+          <a href="/zhou-yong-long.github.io/Works" class="ml">Works</a>
+          
+        
+          
+          <a href="/zhou-yong-long.github.io/About" class="ml">About</a>
+          
+        
+          
+          <a href="/zhou-yong-long.github.io/Tags" class="ml">Tags</a>
+          
+        
+        
+          
+            <a href="mailto:zhouyonglong09@126.com" target="_blank" class="ml">Email</a>
+          
+        
+      </div>
+    </div>
+    <hr style="margin-bottom: 2.6rem">
+  </div>
+</div>
+
+        <div class="trans">
+            <h2>Hello World</h2>
+
+  <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
 
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
@@ -113,99 +215,64 @@
 
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://zhou-yong-long.github.io/zhou-yong-long.github.io/2022/10/08/hello-world/" data-id="cl91a9trd0001pkv042k1anw3" data-title="Hello World" class="article-share-link">分享</a>
-      
-      
-      
-    </footer>
+  <p> — 2022年10月8日</p>
+  
+
+
+        </div>
+        <div class="row mt-2">
+  <h3>Search</h3>
+  <div><input id="search-text" title="search" class="search-text" type="text" placeholder="search......"></div>
+  <div style="margin-top: 1.5rem;">
+    <ul id="result"></ul>
   </div>
+</div>
+        <div class="row mt-2">
   
-    
-  
-</article>
-
-
-</section>
+    <div class="eight columns">
+      <p id="madewith">Made with ❤ and
+        <a class="footer-link icon" href="https://hexo.io" target="_blank" style="text-decoration: none;" rel="noreferrer" aria-label="Hexo.io">
+        <svg class="hexo svg-hov" width="14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>Hexo.js</title><path d="M12 .007L1.57 6.056V18.05L12 23.995l10.43-6.049V5.952L12 .007zm4.798 17.105l-.939.521-.939-.521V12.94H9.08v4.172l-.94.521-.938-.521V6.89l.939-.521.939.521v4.172h5.84V6.89l.94-.521.938.521v10.222z"/></svg>
+        </a>
         
-          <aside id="sidebar">
-  
-    
-
-  
-    
-
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">归档</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/zhou-yong-long.github.io/archives/2022/10/">十月 2022</a></li></ul>
+        at <a href="https://en.wikipedia.org/wiki/Earth" target="_blank" rel="noreferrer">Earth</a>.</p>
+        
     </div>
-  </div>
 
+    <!-- Sepcial thanks to https://simpleicons.org/ for the icons -->
+    <div class="four columns mb-3 posisi" >
+      
 
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">最新文章</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/zhou-yong-long.github.io/2022/10/08/hello-world/">Hello World</a>
-          </li>
-        
-      </ul>
+      
+
+      
+
+      
+
+      
+
     </div>
-  </div>
-
   
-</aside>
-        
+</div>
+
       </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      
-      &copy; 2022 zhou-yong-long<br>
-      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
 
     </div>
-    <nav id="mobile-nav">
-  
-    <a href="/zhou-yong-long.github.io/" class="mobile-nav-link">Home</a>
-  
-    <a href="/zhou-yong-long.github.io/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
-
-
-<script src="/zhou-yong-long.github.io/js/jquery-3.4.1.min.js"></script>
-
-
-
-  
-<script src="/zhou-yong-long.github.io/fancybox/jquery.fancybox.min.js"></script>
-
-
-
-
-<script src="/zhou-yong-long.github.io/js/script.js"></script>
-
-
-
-
 
   </div>
+  <script src="/js/nanobar.min.js"></script>
+
+  <script>
+    var options = {
+      classname: 'nanobar',
+      id: 'myNanobar'
+    };
+    var nanobar = new Nanobar(options);
+    nanobar.go(30);
+    nanobar.go(76);
+    nanobar.go(100);
+  </script>
+
 </body>
+
 </html>
