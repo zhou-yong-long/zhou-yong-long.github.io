@@ -11,38 +11,34 @@
   <meta charset="utf-8">
 
   
-  <title>All Posts - zhou-yong-long</title>
+  <title>数据结构与算法之数组</title>
   
-  <link rel="canonical" href="https://github.com/zhou-yong-long/zhou-yong-long.github.io/archives/">
+  <link rel="canonical" href="https://github.com/zhou-yong-long/zhou-yong-long.github.io/2022/10/12/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E4%B9%8B%E6%95%B0%E7%BB%84/">
   
-  <meta name="description" content="学习语言：Go|Rust|Java|C，领域比较杂，还在摸索中">
+  <meta name="description" content="数组的特点 线性表数据结构（一般指数据只有前后两个方向，而非线性就是树结构） 连续的内存空间和相同类型的数据（为什么是相同类型呢? 因为随机访问数组元素时需要计算偏移量：公式 &amp;#x3D; 内存块首地址 + 类型内存大小 * 下标 ） 插入、删除较慢，查询较快 存在访问越界问题    Go 中切片的">
   
   
   <meta name="author" content="zhou-yong-long">
   
   
-  <meta property="og:image" content="https://github.com/zhou-yong-long/zhou-yong-long.github.io/images/thumbnail.jpg">
-  
   
   <meta property="og:site_name" content="WuShiSan" />
   <meta property="og:type" content="article" />
-  <meta property="og:title" content="All Posts - zhou-yong-long" />
+  <meta property="og:title" content="数据结构与算法之数组" />
   
-  <meta property="og:description" content="学习语言：Go|Rust|Java|C，领域比较杂，还在摸索中">
+  <meta property="og:description" content="数组的特点 线性表数据结构（一般指数据只有前后两个方向，而非线性就是树结构） 连续的内存空间和相同类型的数据（为什么是相同类型呢? 因为随机访问数组元素时需要计算偏移量：公式 &amp;#x3D; 内存块首地址 + 类型内存大小 * 下标 ） 插入、删除较慢，查询较快 存在访问越界问题    Go 中切片的">
   
-  <meta property="og:url" content="https://github.com/zhou-yong-long/zhou-yong-long.github.io/archives/" />
+  <meta property="og:url" content="https://github.com/zhou-yong-long/zhou-yong-long.github.io/2022/10/12/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E4%B9%8B%E6%95%B0%E7%BB%84/" />
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="All Posts - zhou-yong-long">
+  <meta name="twitter:title" content="数据结构与算法之数组">
   
-  <meta name="twitter:description" content="学习语言：Go|Rust|Java|C，领域比较杂，还在摸索中">
-  
-  
-  
-  <meta name="twitter:image" content="https://github.com/zhou-yong-long/zhou-yong-long.github.io/images/thumbnail.jpg">
+  <meta name="twitter:description" content="数组的特点 线性表数据结构（一般指数据只有前后两个方向，而非线性就是树结构） 连续的内存空间和相同类型的数据（为什么是相同类型呢? 因为随机访问数组元素时需要计算偏移量：公式 &amp;#x3D; 内存块首地址 + 类型内存大小 * 下标 ） 插入、删除较慢，查询较快 存在访问越界问题    Go 中切片的">
   
   
-  <meta name="twitter:url" content="https://github.com/zhou-yong-long/zhou-yong-long.github.io/archives/" />
+  
+  
+  <meta name="twitter:url" content="https://github.com/zhou-yong-long/zhou-yong-long.github.io/2022/10/12/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E4%B9%8B%E6%95%B0%E7%BB%84/" />
 
   <!-- Mobile Specific Metas
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -203,160 +199,25 @@
 </div>
 
         <div class="trans">
-          
-<h2>All Posts</h2>
+            <h2>数据结构与算法之数组</h2>
 
+  <h2 id="数组的特点"><a href="#数组的特点" class="headerlink" title="数组的特点"></a>数组的特点</h2><ul>
+<li>线性表数据结构（一般指数据只有前后两个方向，而非线性就是树结构）</li>
+<li>连续的内存空间和相同类型的数据（为什么是相同类型呢? 因为随机访问数组元素时需要计算偏移量：<strong>公式 &#x3D; 内存块首地址 + 类型内存大小 * 下标</strong> ）</li>
+<li>插入、删除较慢，查询较快</li>
+<li>存在访问越界问题</li>
+</ul>
+</br>
 
-    <article>
-      <div class="row">
+<h2 id="Go-中切片的细节"><a href="#Go-中切片的细节" class="headerlink" title="Go 中切片的细节"></a>Go 中切片的细节</h2><p>很多数据结构都是基于数组做扩展，一般改动都是动态扩容，这里举 Go 语言的切片为例：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">type slice struct &#123;</span><br><span class="line">    array unsafe.Pointer</span><br><span class="line">    len   int</span><br><span class="line">    cap   int</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">array: 指向数组的指针。</span><br><span class="line"></span><br><span class="line">len：当前长度。</span><br><span class="line"></span><br><span class="line">cap：容量</span><br></pre></td></tr></table></figure>
 
-        <div class="three columns left lit">
-          <p class="bottom">2022年10月12日</p>
-        </div>
-        <div class="nine columns left mb-3">
-          <a href="/2022/10/12/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E4%B9%8B%E5%9F%BA%E7%A1%80%E7%AF%87/" class="">
-            
-              数据结构与算法之数组
-            
-          </a>
-        </div>
-      </div>
-    </article>
+<blockquote>
+<p>注意：切片是引用传递，扩容机制细节后续阅读源码后分享</p>
+</blockquote>
 
-    <article>
-      <div class="row">
-
-        <div class="three columns left lit">
-          <p class="bottom">2022年10月12日</p>
-        </div>
-        <div class="nine columns left mb-3">
-          <a href="/2022/10/12/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E4%B9%8B%E6%95%B0%E7%BB%84/" class="">
-            
-              数据结构与算法之数组
-            
-          </a>
-        </div>
-      </div>
-    </article>
-
-    <article>
-      <div class="row">
-
-        <div class="three columns left lit">
-          <p class="bottom">2022年10月11日</p>
-        </div>
-        <div class="nine columns left mb-3">
-          <a href="/2022/10/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E4%B9%8B%E5%85%A5%E9%97%A8%E7%AF%87/" class="">
-            
-              数据结构与算法之入门篇
-            
-          </a>
-        </div>
-      </div>
-    </article>
-
-    <article>
-      <div class="row">
-
-        <div class="three columns left lit">
-          <p class="bottom">2022年10月11日</p>
-        </div>
-        <div class="nine columns left mb-3">
-          <a href="/2022/10/11/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E5%AD%A6%E4%B9%A0/" class="">
-            
-              设计模式学习
-            
-          </a>
-        </div>
-      </div>
-    </article>
-
-    <article>
-      <div class="row">
-
-        <div class="three columns left lit">
-          <p class="bottom">2022年10月9日</p>
-        </div>
-        <div class="nine columns left mb-3">
-          <a href="/2022/10/09/Raft%E8%AE%BA%E6%96%87%E5%AF%BC%E8%AF%BB/" class="">
-            
-              Raft论文导读
-            
-          </a>
-        </div>
-      </div>
-    </article>
-
-    <article>
-      <div class="row">
-
-        <div class="three columns left lit">
-          <p class="bottom">2022年10月9日</p>
-        </div>
-        <div class="nine columns left mb-3">
-          <a href="/2022/10/09/%E4%BA%91%E5%8E%9F%E7%94%9F%E5%AD%A6%E4%B9%A0%E5%AE%89%E6%8E%92/" class="">
-            
-              云原生学习安排
-            
-          </a>
-        </div>
-      </div>
-    </article>
-
-    <article>
-      <div class="row">
-
-        <div class="three columns left lit">
-          <p class="bottom">2022年10月9日</p>
-        </div>
-        <div class="nine columns left mb-3">
-          <a href="/2022/10/09/%E5%89%8D%E7%AB%AF%E4%BB%A3%E7%A0%81%E5%AD%A6%E4%B9%A0%E5%AE%89%E6%8E%92/" class="">
-            
-              前端代码学习安排
-            
-          </a>
-        </div>
-      </div>
-    </article>
-
-    <article>
-      <div class="row">
-
-        <div class="three columns left lit">
-          <p class="bottom">2022年10月9日</p>
-        </div>
-        <div class="nine columns left mb-3">
-          <a href="/2022/10/09/%E8%AE%BA%E6%96%87%E5%AD%A6%E4%B9%A0%E5%AE%89%E6%8E%92/" class="">
-            
-              论文学习安排
-            
-          </a>
-        </div>
-      </div>
-    </article>
-
-    <article>
-      <div class="row">
-
-        <div class="three columns left lit">
-          <p class="bottom">2022年10月8日</p>
-        </div>
-        <div class="nine columns left mb-3">
-          <a href="/2022/10/08/hello-world/" class="">
-            
-              Hello World
-            
-          </a>
-        </div>
-      </div>
-    </article>
-
-<div class="pagination-bar">
-  <ul class="pagination">
-    
-    
-  </ul>
-</div>
+  <p><a class="classtest-link" href="/tags/data-structure-and-algorithm-array-%E7%AE%97%E6%B3%95-%E6%95%B0%E7%BB%84/" rel="tag">data-structure-and-algorithm array 算法 数组</a> — 2022年10月12日</p>
+  
 
 
         </div>

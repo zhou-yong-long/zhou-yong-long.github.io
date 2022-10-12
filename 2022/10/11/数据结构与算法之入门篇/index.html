@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+
+  <!-- Minima -->
+  <!-- Hexo theme created by @adisaktijrs -->
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+
+  
+  <title>数据结构与算法之入门篇</title>
+  
+  <link rel="canonical" href="https://github.com/zhou-yong-long/zhou-yong-long.github.io/2022/10/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E4%B9%8B%E5%85%A5%E9%97%A8%E7%AF%87/">
+  
+  <meta name="description" content="前言基于王争大佬的《数据结构与算法之美》的学习笔记 1 如何高效、系统地学习数据结构和算法 数据结构是静态的，算法是动态的 数据结构为算法服务，算法作用在特定的数据结构上 掌握复杂度分析能锻炼算法思维和直觉  1.1 复杂度 定义：复杂度分为时间复杂度、空间复杂度，可用于粗略地估量算法的执行时间和内">
+  
+  
+  <meta name="author" content="zhou-yong-long">
+  
+  
+  
+  <meta property="og:site_name" content="WuShiSan" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="数据结构与算法之入门篇" />
+  
+  <meta property="og:description" content="前言基于王争大佬的《数据结构与算法之美》的学习笔记 1 如何高效、系统地学习数据结构和算法 数据结构是静态的，算法是动态的 数据结构为算法服务，算法作用在特定的数据结构上 掌握复杂度分析能锻炼算法思维和直觉  1.1 复杂度 定义：复杂度分为时间复杂度、空间复杂度，可用于粗略地估量算法的执行时间和内">
+  
+  <meta property="og:url" content="https://github.com/zhou-yong-long/zhou-yong-long.github.io/2022/10/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E4%B9%8B%E5%85%A5%E9%97%A8%E7%AF%87/" />
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="数据结构与算法之入门篇">
+  
+  <meta name="twitter:description" content="前言基于王争大佬的《数据结构与算法之美》的学习笔记 1 如何高效、系统地学习数据结构和算法 数据结构是静态的，算法是动态的 数据结构为算法服务，算法作用在特定的数据结构上 掌握复杂度分析能锻炼算法思维和直觉  1.1 复杂度 定义：复杂度分为时间复杂度、空间复杂度，可用于粗略地估量算法的执行时间和内">
+  
+  
+  
+  
+  <meta name="twitter:url" content="https://github.com/zhou-yong-long/zhou-yong-long.github.io/2022/10/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E4%B9%8B%E5%85%A5%E9%97%A8%E7%AF%87/" />
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Preload fonts
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="preload" href="/fonts/dm-serif-display-v4-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/inter-v2-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  
+<link rel="stylesheet" href="/css/normalize.css">
+
+  
+<link rel="stylesheet" href="/css/skeleton.css">
+
+  
+<link rel="stylesheet" href="/css/custom.css">
+
+  
+<link rel="stylesheet" href="/css/prism-dark.css">
+
+  
+<link rel="stylesheet" href="/css/prism-line-numbers.css">
+
+  <!-- User css -->
+  
+  
+<link rel="stylesheet" href="/css/user.css">
+
+  
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="/images/favicon.png">
+
+  <!-- Custom Theme Color Style
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <style>
+  a:not(.icon) {
+    text-decoration-color: #0FA0CE;
+    background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 50%,
+      #0FA0CE 50%
+    );
+  }
+  blockquote {
+    border-left: 8px solid #0FA0CE;
+  }
+  .nanobar .bar {
+    background: #0FA0CE;
+  }
+  .button.button-primary:hover,
+  button.button-primary:hover,
+  input[type="submit"].button-primary:hover,
+  input[type="reset"].button-primary:hover,
+  input[type="button"].button-primary:hover,
+  .button.button-primary:focus,
+  button.button-primary:focus,
+  input[type="submit"].button-primary:focus,
+  input[type="reset"].button-primary:focus,
+  input[type="button"].button-primary:focus {
+    background-color: #0FA0CE;
+    border-color: #0FA0CE;
+  }
+  input[type="email"]:focus,
+  input[type="number"]:focus,
+  input[type="search"]:focus,
+  input[type="text"]:focus,
+  input[type="tel"]:focus,
+  input[type="url"]:focus,
+  input[type="password"]:focus,
+  textarea:focus,
+  select:focus {
+    border: 1px solid #0FA0CE;
+  }
+</style>
+
+  <!-- Google Analytics (With Privacy Settings On)
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  
+
+  
+  <script src="/js/pic.min.js" defer></script>
+  
+
+  
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div>
+
+        <div class="row">
+  <div class="two columns" style="max-width: 50px">
+    <h1 class="mt-2 mode">
+      <div onclick=setDarkMode(true) id="darkBtn">🌑</div>
+      <div onclick=setDarkMode(false) id="lightBtn" class=hidden>☀️</div>
+      <script >
+        if (localStorage.getItem('preferredTheme') == 'dark') {
+          setDarkMode(true)
+        }
+        function setDarkMode(isDark) {
+          var darkBtn = document.getElementById('darkBtn')
+          var lightBtn = document.getElementById('lightBtn')
+          if (isDark) {
+            lightBtn.style.display = "block"
+            darkBtn.style.display = "none"
+            localStorage.setItem('preferredTheme', 'dark');
+          } else {
+            lightBtn.style.display = "none"
+            darkBtn.style.display = "block"
+            localStorage.removeItem('preferredTheme');
+          }
+          document.body.classList.toggle("darkmode");
+        }
+      </script>
+    </h1>
+  </div>
+
+  <div class="six columns ml-1">
+    <h1 class="mt-2">
+      Hello World
+    </h1>
+  </div>
+
+  <div class="twelve columns">
+    <div class="row">
+      <div class="nine columns left">
+        <a href="/">Home</a>
+        
+          
+          <a href="/Works" class="ml">Works</a>
+          
+        
+          
+          <a href="/About" class="ml">About</a>
+          
+        
+          
+          <a href="/Tags" class="ml">Tags</a>
+          
+        
+        
+          
+            <a href="mailto:zhouyonglong09@126.com" target="_blank" class="ml">Email</a>
+          
+        
+      </div>
+    </div>
+    <hr style="margin-bottom: 2.6rem">
+  </div>
+</div>
+
+        <div class="trans">
+            <h2>数据结构与算法之入门篇</h2>
+
+  <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>基于王争大佬的《数据结构与算法之美》的学习笔记</p>
+<h2 id="1-如何高效、系统地学习数据结构和算法"><a href="#1-如何高效、系统地学习数据结构和算法" class="headerlink" title="1 如何高效、系统地学习数据结构和算法"></a>1 如何高效、系统地学习数据结构和算法</h2><ol>
+<li>数据结构是静态的，算法是动态的</li>
+<li>数据结构为算法服务，算法作用在特定的数据结构上</li>
+<li>掌握复杂度分析能锻炼算法思维和直觉</li>
+</ol>
+<h2 id="1-1-复杂度"><a href="#1-1-复杂度" class="headerlink" title="1.1 复杂度"></a>1.1 复杂度</h2><blockquote>
+<p>定义：复杂度分为时间复杂度、空间复杂度，可用于粗略地估量算法的执行时间和内存消耗</p>
+</blockquote>
+<h3 id="1-1-1-时间复杂度的定义及计算"><a href="#1-1-1-时间复杂度的定义及计算" class="headerlink" title="1.1.1 时间复杂度的定义及计算"></a>1.1.1 时间复杂度的定义及计算</h3><p>时间复杂度是用于评估算法的执行时间的，一般与遍历次数有关，<br>大 O 时间复杂度是只表示最大量级的时间变量就好了，比如 </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">T(n) = F(n) = 2*n + n^2</span><br><span class="line">O(n) = n^2 </span><br></pre></td></tr></table></figure>
+
+<p>如何分析时间复杂度：</p>
+<ul>
+<li>只关注循环次数最多的循环</li>
+<li>只关注串行执行流中时间量级最大的执行代码</li>
+<li>关于嵌套的循环进行相乘即可</li>
+</ul>
+<p>常见的时间复杂度及关系：O(1) &lt; O(logN) &lt; O(N) &lt; O(N*logN) &lt; O(N^2) &lt; O(2^N) &lt; O(N!)<br></br><br>由于现在硬件成本大大降低，可以考虑使用空间换取时间的方式来提高运行速度</p>
+<h3 id="1-1-2-最坏、最好、平均、均摊时间复杂度的意义"><a href="#1-1-2-最坏、最好、平均、均摊时间复杂度的意义" class="headerlink" title="1.1.2 最坏、最好、平均、均摊时间复杂度的意义"></a>1.1.2 最坏、最好、平均、均摊时间复杂度的意义</h3><ul>
+<li>最坏时间复杂度是指最坏情况（一般是指暴力求解、多重循环、全量遍历）下算法执行所需要的时间</li>
+<li>最好时间复杂度是指最好情况（一般是指按照算法的预期效果执行）下算法执行所需要的时间</li>
+<li>平均时间复杂度是指所有可能情况整合到一起后再平均算法执行所需要的时间</li>
+</ul>
+</br>
+
+<p>均摊时间复杂度的特性：</p>
+<ol>
+<li>存在两种及以上的不同时间复杂度情况</li>
+<li>时间复杂度出现是有规律的，可循环的</li>
+</ol>
+<p>均摊的意义在于：将时间复杂度较大的 <strong>分摊</strong> 到较小的时间复杂度情况上</p>
+<p>举例子：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">int count = 0;</span><br><span class="line">int[] array = new int[10];</span><br><span class="line"></span><br><span class="line">void insert(int num)&#123;</span><br><span class="line">    if (count == array.length)&#123;</span><br><span class="line">        int sum = 0;</span><br><span class="line">        for(int i = 0; i &lt; array.length; i++)&#123;</span><br><span class="line">            sum += array[i];</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        array[0] = sum;</span><br><span class="line">        count = 1;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    array[count++] = num;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">该用例中每次触发 O(n) 的 insert 之前都会触发 n - 1 次的 O(1) 的 insert， 所以将 O(n) 均摊到 n - 1 次的 O(1) 的 insert 上时整体的时间复杂度为 O(1) </span><br></pre></td></tr></table></figure>
+
+
+
+
+  <p><a class="classtest-link" href="/tags/data-structure-and-algorithm/" rel="tag">data-structure-and-algorithm</a> — 2022年10月11日</p>
+  
+
+
+        </div>
+        <div class="row mt-2">
+  <h3>Search</h3>
+  <div><input id="search-text" title="search" class="search-text" type="text" placeholder="search......"></div>
+  <div style="margin-top: 1.5rem;">
+    <ul id="result"></ul>
+  </div>
+</div>
+        <div class="row mt-2">
+  
+    <div class="eight columns">
+      <p id="madewith">Made with ❤ and
+        <a class="footer-link icon" href="https://hexo.io" target="_blank" style="text-decoration: none;" rel="noreferrer" aria-label="Hexo.io">
+        <svg class="hexo svg-hov" width="14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>Hexo.js</title><path d="M12 .007L1.57 6.056V18.05L12 23.995l10.43-6.049V5.952L12 .007zm4.798 17.105l-.939.521-.939-.521V12.94H9.08v4.172l-.94.521-.938-.521V6.89l.939-.521.939.521v4.172h5.84V6.89l.94-.521.938.521v10.222z"/></svg>
+        </a>
+        
+        at <a href="https://en.wikipedia.org/wiki/Earth" target="_blank" rel="noreferrer">Earth</a>.</p>
+        
+    </div>
+
+    <!-- Sepcial thanks to https://simpleicons.org/ for the icons -->
+    <div class="four columns mb-3 posisi" >
+      
+
+      
+
+      
+
+      
+
+      
+
+    </div>
+  
+</div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <script src="/js/nanobar.min.js"></script>
+
+  <script>
+    var options = {
+      classname: 'nanobar',
+      id: 'myNanobar'
+    };
+    var nanobar = new Nanobar(options);
+    nanobar.go(30);
+    nanobar.go(76);
+    nanobar.go(100);
+  </script>
+
+</body>
+
+</html>
